@@ -32,6 +32,40 @@ A full-stack chatbot web application built with Flask, integrated with OpenAI's 
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone https://github.com/yourusername/ChatbotApp.git
-   cd ChatbotApp
+```bash
+git clone https://github.com/yourusername/ChatbotApp.git
+cd ChatbotApp
+```
+2. **Create a .env File**
+   
+In the project root, create a .env file and add your environment variables:
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+3. **Build and Run the Application**
+   
+Ensure you have Docker and Docker Compose installed. Then, run the following command:
+```bash
+docker-compose up --build
+```
+
+## Usage
+   - Open your web browser and navigate to http://localhost.
+   - Type your message in the input field and press "Send" to interact with the chatbot.
+### Environment Variables
+   - Make sure to set the following environment variables in your .env file:
+   - OPENAI_API_KEY: Your OpenAI API key for using the ChatGPT model.
+### Docker Commands
+**Build the Docker image:**
+```bash
+docker-compose build
+```
+**Run the application:**
+```bash
+docker-compose up
+```
+**Stop the application:**
+```bash
+docker-compose down
+```
