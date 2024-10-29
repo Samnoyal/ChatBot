@@ -4,7 +4,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - OPENAI_API_KEY=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
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
   nginx:
     image: nginx:alpine
     volumes:
