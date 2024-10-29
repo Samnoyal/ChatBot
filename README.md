@@ -31,7 +31,7 @@ A full-stack chatbot web application built with Flask, integrated with OpenAI's 
 ## File Structure
 
 ```plaintext
-ChatbotApp/
+ChatBot/
 ├── .env                  # Environment variables
 ├── app/
 │   ├── static/          # Static files (CSS, JavaScript)
