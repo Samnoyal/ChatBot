@@ -28,6 +28,24 @@ A full-stack chatbot web application built with Flask, integrated with OpenAI's 
 - **Web Server**: Nginx
 - **Chatbot Model**: OpenAI's GPT-3.5-turbo or GPT-4
 
+## File Structure
+
+```plaintext
+ChatbotApp/
+├── .env                  # Environment variables
+├── app/
+│   ├── static/          # Static files (CSS, JavaScript)
+│   │   └── css/         # CSS files for UI styling
+│   ├── templates/       # HTML templates
+│   │   └── index.html   # Frontend (HTML)
+│   ├── chatbot.py       # Chatbot logic
+│   └── app.py           # Main Flask application
+├── Dockerfile            # Docker setup
+├── nginx/
+│   └── nginx.conf        # Nginx configuration
+└── docker-compose.yml    # Docker Compose file
+```
+
 ## Setup Instructions
 
 1. **Clone the Repository**
