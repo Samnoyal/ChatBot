@@ -33,8 +33,8 @@ A full-stack chatbot web application built with Flask, integrated with OpenAI's 
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/ChatbotApp.git
-cd ChatbotApp
+git clone [https://github.com/yourusername/ChatbotApp.git](https://github.com/Samnoyal/ChatBot.git)
+cd ChatBot
 ```
 2. **Create a .env File**
    
