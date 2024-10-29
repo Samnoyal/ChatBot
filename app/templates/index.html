@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <div id="chat-container">
+      <h1 style="text-align: center; color: #e0e0e0">Chatbot</h1>
+      <div id="chat-box" style="display: flex; flex-direction: column"></div>
+      <div style="display: flex; align-items: center">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script>
+      async function sendMessage() {
+        const input = document.getElementById("chat-input");
+        const message = input.value;
+        input.value = "";
+
+        // Send message to the server
+        const response = await fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: message }),
+        });
+
+        const data = await response.json();
+        // Append user and bot messages with their respective styles
+        document.getElementById("chat-box").innerHTML += `
+                <div class="user-message">${message}</div>
+                <div class="bot-message">${data.response}</div>
+            `;
+        document.getElementById("chat-box").scrollTop =
+          document.getElementById("chat-box").scrollHeight; // Auto-scroll to the bottom
+      }
+    </script>
+  </body>
+</html>
