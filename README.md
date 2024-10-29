@@ -71,7 +71,7 @@ docker-compose down
 ```
 
 ## Contact
-   ### For any questions or suggestions, please feel free to reach out to [samnoyal33@gmail.com].
+- For any questions or suggestions, please feel free to reach out to [samnoyal33@gmail.com].
 
 ## License
 - This project is licensed under the MIT License. See the LICENSE file for details.
